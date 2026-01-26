@@ -106,3 +106,95 @@ class Myapp extends StatelessWidget{
 }
   
 </pre>
+
+
+<h3> Class 3: actions, leading, TextButton, IconButton,  </h3>
+
+<pre>
+  
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(Myapp());
+}
+
+class Myapp extends StatelessWidget{
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        home:  Scaffold(
+          backgroundColor: Colors.greenAccent,
+          appBar: AppBar( leading:
+          // Image.asset("333.jpg"),
+
+            Icon(Icons.home),
+            backgroundColor: Colors.green,title: Text("Adnan Devf", style:
+          TextStyle(color: Colors.cyan, backgroundColor: Colors.amber,fontWeight: FontWeight.bold ),),
+          actions: [
+            //Pop up Notefications
+            Builder(builder:
+            (context){
+              return IconButton(onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text("Admanasd",style: TextStyle(color: Colors.red),)
+                  ,duration: Duration(seconds: 1), backgroundColor: Colors.blue,)
+                );
+              }, icon: Icon(Icons.add_a_photo_rounded));
+            }
+            ),
+          ],
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: 200,
+                  color: Colors.blueGrey,
+                  alignment: Alignment.center,
+                  child: Text("lsdfhsfdf  dsfdsfdsf lsdfhsfdf  dsfdsfdsf sdfsdfdsfdsf dsffdsfdslsdfhsfdf  dsfdsfdsf sdfsdfdsfdsf dsffdsfdslsdfhsfdf  dsfdsfdsf sdfsdfdsfdsf dsffdsfdslsdfhsfdf  dsfdsfdsf sdfsdfdsfdsf dsffdsfds sdfsdfdsfdsf dsffdsfds",
+                    textAlign: TextAlign.start,
+                    maxLines: 2,
+                    textDirection:
+                    TextDirection.ltr, style: TextStyle(
+                        color: Colors.black),),
+                ),
+                //Icons
+                Container(
+                  color: Colors.yellow,
+                  child:  Icon(Icons.android, color: Colors.green, size: 50,) ,
+                ),
+                Container(
+                  color: Colors.blue,
+                  child:  Image.network("https://www.facebook.com/images/icons/FBLogo_Blueprint.png",
+                    height: 112, width: 160, ) ,
+                ),
+                Container(
+                  color: Colors.redAccent,
+                  child:  Image.asset("333.jpg",
+                    height: 221, width: 221, fit: BoxFit.fill, ) ,
+                ),
+                Container(
+                  color: Colors.yellow,
+                  height: 22, width: 222,
+                  child:
+                  Builder(builder:
+                  (context){
+                    return TextButton(onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Adnasnd")));
+                    } , child: Text("Click Me and Show Noti", style: TextStyle(color: Colors.blue),));
+                  }
+                  )
+                  ,
+
+                ),
+              ],
+            ) ,
+
+          ),
+
+        ),
+    );
+  }
+}
+  
+</pre>
