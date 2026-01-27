@@ -280,7 +280,7 @@ class AppMAin extends StatelessWidget{
 
 <h3> Class 5: ElevatedButton, </h3>
 
-<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<h4> ElevatedButton, shape( Radius ), side( border ),GestureDetector,Icon Button,Text Button,  </h4>
 <pre>
   Container(
                 width: 100,
@@ -302,26 +302,60 @@ class AppMAin extends StatelessWidget{
               ),
 </pre>
 
-<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<h4> GestureDetector,Icon Button,Text Button, </h4>
 <pre>
-  Container(
-                width: 100,
-                color: Colors.amber,
-                child: ElevatedButton( style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrangeAccent,
-                  foregroundColor: Colors.amberAccent,
-                  shape:ContinuousRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(9)
-                  ) ,
-                  side: BorderSide(
-                      color: Colors.black87,
-                    width: 3
-                  ) ,
 
-                ), onPressed: () {
-                  print("Press");
-                } , child: Text("Press")),
+            //Text Button
+            Container(
+              height:70,
+              width:double.infinity ,
+              color: Colors.teal,
+              child: 
+              TextButton( style:TextButton.styleFrom(
+               backgroundColor: Colors.deepOrange,
+                textStyle: TextStyle(color: Colors.amberAccent, fontSize: 30)
               ),
+                  onPressed: () {} , child:
+              Text("Chick me")
+              ),
+            ),
+
+            
+            //Icon Button
+            Container(
+              height:70,
+              width:double.infinity ,
+              color: Colors.teal,
+              child:
+              IconButton( style: IconButton.styleFrom(
+                foregroundColor: Colors.amber,
+                backgroundColor: Colors.blue,
+              ) ,
+                  onPressed: () {} ,
+                  icon: Icon(Icons.all_inclusive_outlined,size: 40,))
+              ,
+              ),
+        
+  
+  //GestureDetector
+            Container(
+              height:70,
+              width:double.infinity ,
+              color: Colors.teal,
+              child: GestureDetector(
+                onTap: () {
+                  print("One Tap");
+                },
+                  onLongPressUp: () {
+                  print("Long press");
+                  },
+                onDoubleTap: () {
+                  print("Two Tap");
+                },
+                child:
+                Text("G",style: TextStyle(backgroundColor: Colors.amber),)
+              ) ,
+            ),
 </pre>
 <h4> ElevatedButton, shape( Radius ), side( border )  </h4>
 <pre>
