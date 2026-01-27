@@ -198,3 +198,81 @@ class Myapp extends StatelessWidget{
 }
   
 </pre>
+
+<h3> Class 4: খেয়াল কর এখানে আমরা MaterialApp রিটার্ন নেইনি আমরা অন্য ফাংশন থেকে রিটার্ন দিয়েছি কেবল Scaffold তাহলে কাজ করব, showDialog  </h3>
+
+<pre>
+import 'package:flutter/material.dart';
+
+void  main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // আদনান খেয়াল কর এখানে আমরা MaterialApp রিটার্ন নেইনি আমরা অন্য ফাংশন থেকে রিটার্ন দিয়েছি কেবল Scaffold তাহলে কাজ করবে
+      home: AppMAin() ,
+    );
+  }
+}
+
+
+class AppMAin extends StatelessWidget{
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.pinkAccent,
+          title: Text("Tom App"),
+          leading: Icon(Icons.add),
+          actions: [
+            Builder(builder: (context){
+              return IconButton(onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  backgroundColor:Colors.indigoAccent,content:
+                Text("adnan",style:
+                TextStyle(color: Colors.cyanAccent),)
+                  ,duration: Duration(seconds: 1),));
+              } , icon: Icon(Icons.camera_alt));
+            })
+          ],
+        ),
+        body: Column(
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              height: 200,
+              width: 500,
+              color: Colors.amber,
+              child:Row(
+                children: [
+                  Text("Hi I am Tom",style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 30,
+                  ),),
+                   // see showDialog 
+                  TextButton(style: TextButton.styleFrom(
+                      backgroundColor: Colors.indigoAccent,
+                      foregroundColor: Colors.lightGreen
+                  ),onPressed: () {
+                    showDialog(context: context, builder:
+                        (context){
+                      return AlertDialog(
+                        title: Text("asd"),
+                        content: Text("sad"),
+                      );
+                    }
+                    );
+                  } , child:
+                  Text("Click Me",style: TextStyle(fontSize: 20,color: Colors.cyanAccent),),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ) ,
+      );
+  }
+}
+</pre>
