@@ -276,3 +276,92 @@ class AppMAin extends StatelessWidget{
   }
 }
 </pre>
+
+
+<h3> Class 5: ElevatedButton, </h3>
+
+<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<pre>
+  Container(
+                width: 100,
+                color: Colors.amber,
+                child: ElevatedButton( style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrangeAccent,
+                  foregroundColor: Colors.amberAccent,
+                  shape:ContinuousRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9)
+                  ) ,
+                  side: BorderSide(
+                      color: Colors.black87,
+                    width: 3
+                  ) ,
+
+                ), onPressed: () {
+                  print("Press");
+                } , child: Text("Press")),
+              ),
+</pre>
+
+<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<pre>
+  Container(
+                width: 100,
+                color: Colors.amber,
+                child: ElevatedButton( style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrangeAccent,
+                  foregroundColor: Colors.amberAccent,
+                  shape:ContinuousRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9)
+                  ) ,
+                  side: BorderSide(
+                      color: Colors.black87,
+                    width: 3
+                  ) ,
+
+                ), onPressed: () {
+                  print("Press");
+                } , child: Text("Press")),
+              ),
+</pre>
+<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<pre>
+  Container(
+                width: 100,
+                color: Colors.amber,
+                child: ElevatedButton( style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrangeAccent,
+                  foregroundColor: Colors.amberAccent,
+                  shape:ContinuousRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9)
+                  ) ,
+                  side: BorderSide(
+                      color: Colors.black87,
+                    width: 3
+                  ) ,
+
+                ), onPressed: () {
+                  print("Press");
+                } , child: Text("Press")),
+              ),
+</pre>
+<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<pre>
+  Container(
+                width: 100,
+                color: Colors.amber,
+                child: ElevatedButton( style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrangeAccent,
+                  foregroundColor: Colors.amberAccent,
+                  shape:ContinuousRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9)
+                  ) ,
+                  side: BorderSide(
+                      color: Colors.black87,
+                    width: 3
+                  ) ,
+
+                ), onPressed: () {
+                  print("Press");
+                } , child: Text("Press")),
+              ),
+</pre>
