@@ -243,7 +243,7 @@ class AppMAin extends StatelessWidget{
             Container(
               alignment: Alignment.topLeft,
               height: 200,
-              width: 500,
+              width: double.infinity, // infinity দেওয়া হয়েছে সব ফোনের স্ক্রিনে ফিট হওয়ার জন্য।,
               color: Colors.amber,
               child:Row(
                 children: [
