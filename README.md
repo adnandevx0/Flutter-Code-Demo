@@ -532,3 +532,19 @@ class AppMAin extends StatelessWidget{
             ),
   
 </pre>
+
+<h4> ListView  </h4>
+
+<pre>
+
+  ListView(
+              //vertical, horizontal
+              scrollDirection: Axis.vertical,
+              children: [
+                Text("Adnan Devf", style: TextStyle(color: Colors.pink, fontSize: 50),),
+                Text("Adnan Devf", style: TextStyle(color: Colors.pink, fontSize: 50),),
+                Text("Adnan Devf", style: TextStyle(color: Colors.pink, fontSize: 50),),
+                Text("Adnan Devf", style: TextStyle(color: Colors.pink, fontSize: 50),),
+
+              ],
+</pre>
