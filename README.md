@@ -690,3 +690,91 @@ class AppMAin extends StatelessWidget{
 
       ) ,
 </pre>
+
+
+<h5>Page change</h5>
+<pre>
+
+  import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home(),
+    );
+  }
+}
+
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body:
+      Container(
+        height: 200,
+          width: double.infinity,
+          color: Colors.redAccent,
+          child: Column(
+            children: [
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,)
+                  ,onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return Setting();
+                    }));
+              } , child: Text(
+                "Setting",
+                style:TextStyle(
+                  color: Colors.blue,
+                  fontSize: 40,
+                ),
+              )),
+              ElevatedButton(onPressed: () {} , child: Text(
+                "Profile",
+                style:TextStyle(
+                  color: Colors.blue,
+                  fontSize: 40,
+                ),
+              ))
+            ] ,
+          )
+      ),
+      );
+  }
+}
+
+class Setting extends StatelessWidget {
+  const Setting({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:
+      ElevatedButton(onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return Home();
+        }));
+      }, child: Text(
+        "Home",
+        style:TextStyle(
+          color: Colors.blue,
+          fontSize: 40,
+        ),)
+      ,
+    ));
+  }
+}
+
+
+</pre>
