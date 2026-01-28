@@ -564,4 +564,53 @@ class AppMAin extends StatelessWidget{
           ),),
         );
       }) 
+
+
+
+
+
+import 'package:flutter/material.dart';
+void  main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget{
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AppMAin() ,
+    );
+  }
+}
+class AppMAin extends StatelessWidget{
+  List<String> names = [
+    "Adnan",
+    "Tamanna",
+    "Adrikadi",
+    "Toms",
+    "Shornali"
+  ];
+  Widget build(BuildContext context){
+    return Scaffold(
+    
+      body: ListView.builder(
+        itemCount: names.length,
+          itemBuilder: (context, index) {
+        return Container(
+          height: 50,
+          color: Colors.blue,
+          width: double.infinity,
+          child: Text("${names[index]}", style: TextStyle(
+            color: Colors.white,
+            fontSize: 30
+          ), ),
+        );
+      }
+      ) ,
+    );
+  }
+}
+
+
+
+  
 </pre>
