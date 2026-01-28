@@ -533,10 +533,12 @@ class AppMAin extends StatelessWidget{
   
 </pre>
 
-<h4> ListView  </h4>
+<h4>ListView Simple</h4>
 
 <pre>
 
+  <h4> ListView  </h4>
+  
   ListView(
               //vertical, horizontal
               scrollDirection: Axis.vertical,
@@ -549,6 +551,7 @@ class AppMAin extends StatelessWidget{
               ],
 
 
+<h4> Loop ListView Simple</h4>
 
    ListView.builder(
           itemCount: 20,
@@ -567,7 +570,7 @@ class AppMAin extends StatelessWidget{
 
 
 
-
+<h4>Data From List</h4>
 
 import 'package:flutter/material.dart';
 void  main(){
@@ -610,7 +613,56 @@ class AppMAin extends StatelessWidget{
   }
 }
 
+<h4>Data From List with logic </h4>
 
 
+import 'package:flutter/material.dart';
+void  main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget{
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AppMAin() ,
+    );
+  }
+}
+class AppMAin extends StatelessWidget{
+  List<String> names = [
+    "Adnan",
+    "Tamanna",
+    "Adrikadi",
+    "Toms",
+    "Shornali"
+  ];
+  Widget build(BuildContext context){
+    return Scaffold(
+      body: ListView.builder(
+
+        itemCount: names.length,
+          itemBuilder: (context, index) {
+
+          var name = names[index];
+
+          if(  name[index].startsWith('A') ){
+            name = name.replaceFirst('A', 'C');
+            //return SizedBox(); //bull
+          }
+        return Container(
+          height: 50,
+          color: Colors.blue,
+          width: double.infinity,
+          child: Text(name
+            , style: TextStyle(
+            color: Colors.white,
+            fontSize: 30
+          ), ),
+        );
+      }
+      ) ,
+    );
+  }
+}
   
 </pre>
