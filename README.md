@@ -357,26 +357,30 @@ class AppMAin extends StatelessWidget{
               ) ,
             ),
 </pre>
-<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<h4> InkWell  </h4>
 <pre>
-  Container(
-                width: 100,
-                color: Colors.amber,
-                child: ElevatedButton( style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrangeAccent,
-                  foregroundColor: Colors.amberAccent,
-                  shape:ContinuousRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(9)
-                  ) ,
-                  side: BorderSide(
-                      color: Colors.black87,
-                    width: 3
-                  ) ,
-
-                ), onPressed: () {
-                  print("Press");
-                } , child: Text("Press")),
-              ),
+   Container(
+              height: 100,
+              width: double.infinity,
+              //এখানে যদি কালার ব্যবহার করি তাহলে বাটনে ক্লিক করার সময় যে কালার ওইগুলো শো করবে না
+              //color: Colors.blue,
+              child: InkWell(
+                  splashColor: Colors.amberAccent,
+                  radius: 200,
+                  borderRadius: BorderRadius.circular(30),
+                  onTap: () {
+                    print("One Tap");
+                  },
+                  onLongPressUp: () {
+                    print("Long press");
+                  },
+                  onDoubleTap: () {
+                    print("Two Tap");
+                  },
+                  child:
+                  Text("Click me",style: TextStyle(fontSize: 44),)
+              ) ,
+            )
 </pre>
 <h4> ElevatedButton, shape( Radius ), side( border )  </h4>
 <pre>
