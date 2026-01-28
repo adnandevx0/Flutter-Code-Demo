@@ -547,4 +547,21 @@ class AppMAin extends StatelessWidget{
                 Text("Adnan Devf", style: TextStyle(color: Colors.pink, fontSize: 50),),
 
               ],
+
+
+
+   ListView.builder(
+          itemCount: 20,
+          itemBuilder: (context, index) {
+        return Container(
+          height: 50,
+          width: double.infinity,
+          color: index % 2 == 0 ? Colors.green : Colors.redAccent,
+          child: Text("$index", style: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),),
+        );
+      }) 
 </pre>
