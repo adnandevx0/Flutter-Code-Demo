@@ -488,3 +488,47 @@ class AppMAin extends StatelessWidget{
               ,),
             ),
 </pre>
+
+
+<h4> Container,   </h4>
+
+<pre>
+
+   Container(
+              height: 300,
+              width: 300,
+              decoration: BoxDecoration(
+                color: Colors.yellow,
+                //borderRadius: BorderRadius.circular(40),
+                //border: Border.all(color: Colors.red,width: 22)
+
+                  //remove borderRadius: BorderRadius.circular(40),
+                border: Border(
+                  top:BorderSide(color: Colors.green,width: 10),
+                  bottom: BorderSide(color: Colors.black, width: 15)
+                ),
+                //background image
+                image:  DecorationImage(image:
+                    AssetImage('assets/333.jpg'),
+                  fit: BoxFit.cover
+                ),
+                //shadow
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.pink,
+                  spreadRadius: 2,
+                    blurRadius: 2,
+                    offset:Offset(0,3)
+                  )
+                ]
+              ),
+
+              alignment: Alignment.center,
+              child: Text("AD",style: TextStyle(
+                color: Colors.white,
+                fontSize: 100,
+                fontWeight: FontWeight.bold,
+              ),),
+            ),
+  
+</pre>
