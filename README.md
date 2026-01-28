@@ -382,24 +382,57 @@ class AppMAin extends StatelessWidget{
               ) ,
             )
 </pre>
-<h4> ElevatedButton, shape( Radius ), side( border )  </h4>
+<h4> TextField,   </h4>
 <pre>
-  Container(
-                width: 100,
-                color: Colors.amber,
-                child: ElevatedButton( style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepOrangeAccent,
-                  foregroundColor: Colors.amberAccent,
-                  shape:ContinuousRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(9)
-                  ) ,
-                  side: BorderSide(
-                      color: Colors.black87,
-                    width: 3
-                  ) ,
-
-                ), onPressed: () {
-                  print("Press");
-                } , child: Text("Press")),
+  TextField(
+              maxLength: 3,
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 20,
               ),
+              decoration:InputDecoration(
+                hintText: "Enter Your Name",
+                hintStyle: TextStyle(
+                  color: Colors.amber,
+                ),
+                //label: Text("Email"),
+                labelText: "asd",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                focusedBorder:
+                OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black87,
+                    width: 3
+                  )
+                ),
+                //defult
+                enabledBorder:
+                OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.deepOrange)
+                ),
+                disabledBorder:
+                OutlineInputBorder(borderSide:
+                  BorderSide(color: Colors.greenAccent),
+
+                ),
+                //background color
+                fillColor: Colors.pink,
+                filled: true,
+                //before inpoted text
+                //way 1
+                prefix: Column(
+                  children: [
+                    Icon(Icons.thirty_fps_rounded)
+                  ],
+                ),
+                //way 2 :
+               // prefixIcon: Icon(Icons.thirty_fps_rounded) ,
+
+                //end inpoted text
+                suffixIcon: Icon(Icons.fax_rounded,color: Colors.green,) ,
+              ),
+
+            )
 </pre>
