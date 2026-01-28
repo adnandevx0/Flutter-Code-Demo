@@ -666,3 +666,27 @@ class AppMAin extends StatelessWidget{
 }
   
 </pre>
+
+
+<h4>GridView</h4>
+
+<pre>
+
+  GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        children: [
+          for( int x = 0; x < 20; x++)
+            Container(
+              color: Colors.blue,
+              alignment: Alignment.center,
+              margin: EdgeInsets.all(1),
+              child: Text(
+                '$x',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            )
+
+      ],
+
+      ) ,
+</pre>
