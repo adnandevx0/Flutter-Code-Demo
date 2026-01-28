@@ -382,7 +382,7 @@ class AppMAin extends StatelessWidget{
               ) ,
             )
 </pre>
-<h4> TextField,   </h4>
+<h4> TextField  </h4>
 <pre>
   TextField(
               maxLength: 3,
@@ -435,4 +435,56 @@ class AppMAin extends StatelessWidget{
               ),
 
             )
+</pre>
+
+
+<h4> TextFromField,   </h4>
+<pre>
+ Container(
+              height: 50,
+              width: double.infinity,
+              // color: Colors.teal,
+              child:
+              Padding(padding: EdgeInsetsGeometry.all(4),child:
+              TextFormField(
+               // maxLength: 2,
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 20,
+                ),
+                decoration:InputDecoration(
+                  hintText: "Enter Your Name",
+                  hintStyle: TextStyle(
+                    color: Colors.amber,
+                  ),
+                  //label: Text("Email"),
+                  labelText: "asd",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  focusedBorder:
+                  OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Colors.black87,
+                          width: 3
+                      )
+                  ),
+                  //defult
+                  enabledBorder:
+                  OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.deepOrange)
+                  ),
+                  disabledBorder:
+                  OutlineInputBorder(borderSide:
+                  BorderSide(color: Colors.greenAccent),
+                  ),
+                 //background color
+                  fillColor: Colors.pink,
+                  filled: true,
+                ),
+               //data validatios
+               // validator: ;
+              )
+              ,),
+            ),
 </pre>
