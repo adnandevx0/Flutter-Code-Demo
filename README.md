@@ -779,18 +779,17 @@ class Setting extends StatelessWidget {
 
 
 
-
-
-
-
-
- Container(
+Container(
           height: 200,
           width: double.infinity,
           color: Colors.redAccent,
           child: TextButton(onPressed: () {
             //Current Page Fele Dibe
             Navigator.pop(context);
+            // all page clear kore tergate apage a jabe
+            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context){
+              return Home();
+            }), (route) => false);
           }, child: Text("asdsa")),
         ),
 
